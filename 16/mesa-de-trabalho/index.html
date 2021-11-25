@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,11 +22,111 @@
             - Padrão do sistema: Arial, sans-serif.
 
         */
-        
+        body {}
+
+        .conteudo {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 50px auto;
+            width: 1000px;
+            padding: 16px 31px;
+            max-height: 682px;
+            background-color: #ffdf00;
+            position: relative;
+        }
+
+        .conteudo__titulo {
+            color: #ff8c40;
+            font-weight: 200;
+            font-size: 37px;
+            position: absolute;
+            top: 62px;
+            left: 223px;
+        }
+
+        #interrogacao {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 81px;
+            left: 163px;
+        }
+
+        .instrucoes {
+            background-color: #ffffff;
+            text-align: center;
+            border-radius: 100px;
+            border-top: 5px solid #f4c732;
+            border-bottom: 5px solid #0389ca;
+            padding-bottom: 110px;
+        }
+
+        .instrucoes__etapa {
+            display: inline-block;
+            margin-top: 122px;
+            position: relative;
+        }
+
+        .instrucoes__etapa:first-child {
+            margin-right: 25px;
+        }
+
+        .instrucoes__etapa:last-child {
+            margin-left: 15px;
+        }
+
+        .instrucoes__texto {
+            text-align: left;
+            position: absolute;
+            top: 213px;
+            left: 25px;
+        }
+
+        .instrucoes_numetapa {
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            background-color: #ff8c40;
+            color: #ffffff;
+            font-size: 32px;
+            /* font-weight: bold; */
+            position: relative;
+            top: 29px;
+            margin: 0 auto;
+            /* text-align: center; */
+        }
+
+        span {
+            position: absolute;
+            top: 13px;
+            left: 19px;
+        }
+
+
+        .conteudo__botao {
+            width: 265px;
+            height: 9px;
+            padding: 30px;
+            border-radius: 45px;
+            background-color: #ff8c40;
+            position: relative;
+            /* left: 302px; */
+            top: -32px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .conteudo__botao a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 24px;
+            position: relative;
+            top: -8px;
+        }
     </style>
 </head>
+
 <body>
-<!--
+    <!--
 
     Checklist da atividade da Mesa de trabalho.
     (  ) Refatore (re-escreva) o código fonte da estrutura HTML, considerando a semântica do código HTML.
@@ -41,24 +142,31 @@
 
 -->
 
-    <div>
-        <div>Como instalar?</div>
-        <div>
-            <div>
+    <main class="conteudo">
+        <img id="interrogacao" src="./imagens/icone-interogacao.png" alt="Miniatura da primeira etapa">
+        <h1 class="conteudo__titulo">Como instalar?</h1>
+        <section class="instrucoes">
+            <article class="instrucoes__etapa">
+                <div class="instrucoes_numetapa"><span>1</span></div>
                 <img src="./imagens/miniatura.png" alt="Miniatura da primeira etapa">
-                <div>Navegue até o app.oestecarioca.org</div>
-            </div>
-            <div>
+                <p class="instrucoes__texto">Navegue até o app.oestecarioca.org</p>
+            </article>
+            <article class="instrucoes__etapa">
+                <div class="instrucoes_numetapa"><span>2</span></div>
                 <img src="./imagens/miniatura.png" alt="Miniatura da segunda etapa">
-                <div>Clique no botão Menu</div>
-            </div>
-            <div>
+                <p class="instrucoes__texto">Clique no botão Menu</p>
+            </article>
+            <article class="instrucoes__etapa">
+                <div class="instrucoes_numetapa"><span>3</span></div>
                 <img src="./imagens/miniatura.png" alt="Miniatura da terçeira etapa">
-                <div>Selecione a opção Adicionar Tela Principal</div>
-            </div>
+                <p class="instrucoes__texto">Selecione a opção Adicionar Tela Principal</p>
+            </article>
+        </section>
+        <div class="conteudo__botao">
+            <a href="">Assista ao vídeo</a>
         </div>
-        <div>Assista ao vídeo</div>
-    </div>
+    </main>
 
 </body>
+
 </html>
